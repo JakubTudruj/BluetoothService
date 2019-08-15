@@ -36,7 +36,7 @@ extension BluetoothDevice.State {
     init(cbPeripheralState: CBPeripheralState) {
         switch cbPeripheralState {
         case .disconnected:
-            self = .connected
+            self = .disconnected
         case .connecting:
             self = .connecting
         case .connected:
