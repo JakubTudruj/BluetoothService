@@ -21,14 +21,22 @@ public struct BluetoothDevice {
     public let name: String?
     public let state: State
     
+    public init(id: UUID = UUID(), name: String? = nil, state: State = .disconnected) {
+        self.id = id
+        self.name = name
+        self.state = state
+    }
+
 }
 
 extension BluetoothDevice {
+    
     init(peripheral: CBPeripheral) {
         self.id = peripheral.identifier
         self.name = peripheral.name
         self.state = State(cbPeripheralState: peripheral.state)
     }
+    
 }
 
 extension BluetoothDevice.State {
