@@ -8,7 +8,7 @@
 import CoreBluetooth
 import Foundation
 
-public struct BluetoothDevice {
+public struct BluetoothDevice: Equatable {
     
     public enum State {
         case connected
@@ -38,6 +38,7 @@ extension BluetoothDevice {
     }
     
 }
+
 
 extension BluetoothDevice.State {
     
