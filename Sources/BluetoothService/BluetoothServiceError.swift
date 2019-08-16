@@ -11,4 +11,5 @@ public enum BluetoothServiceError: LocalizedError {
     case unknown
     case bluetoothIsDisabled
     case serviceIsResetting
+    case deviceIsUnreachable
 }
